@@ -8,11 +8,11 @@ body {
     font-family: 'Great Vibes', cursive;
 }
 
-/* header {
+header {
     max-height: 100vh;
     height: 100vh;
     overflow: hidden;
-} */
+}
 
 header .header {
     max-height: 100vh;
@@ -115,9 +115,14 @@ header .header .header-content {
     cursor: pointer;
 }
 
+main {
+    overflow: hidden;
+}
+
 main .main-content {
     position: relative;
     min-height: 150vh;
+    background-color: #e3f2e8;
 }
 
 main .main-content .bg-main-top-left {
@@ -131,6 +136,7 @@ main .main-content .bg-main-top-left {
     background-position: center;
     background-image: url(../images/t.webp);
     transform: rotateY(-180deg);
+    z-index: 10;
 }
 
 main .main-content .bg-main-top-right {
@@ -143,6 +149,7 @@ main .main-content .bg-main-top-right {
     background-size: cover;
     background-position: center;
     background-image: url(../images/t.webp);
+    z-index: 10;
 }
 
 main .main-content .bg-main-bottom-right {
@@ -156,6 +163,7 @@ main .main-content .bg-main-bottom-right {
     background-position: center;
     background-image: url(../images/t.webp);
     transform: rotateX(-180deg);
+    z-index: 10;
 }
 
 main .main-content .bg-main-bottom-left {
@@ -169,6 +177,7 @@ main .main-content .bg-main-bottom-left {
     background-position: center;
     background-image: url(../images/t.webp);
     transform: rotate(180deg);
+    z-index: 10;
 }
 
 main .main-content .bg-main-between-left {
@@ -241,6 +250,7 @@ main .invite-customer {
     min-height: 100vh;
     padding-top: 100px;
     font-family: 'Great Vibes', cursive;
+    background-color: #e3f2e8;
 }
 
 main .invite-customer .invite-frame {
@@ -320,4 +330,45 @@ main .invite-customer .invite-frame {
 
 .mess-contact {
     padding-top: 80px;
+}
+
+.hidden {
+    display: none;
+}
+
+.animated {
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.main-position {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: auto;
+    width: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: auto;
+    background-color: #e3f2e8;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #e3f2e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 900px;
+    object-fit: contain;
 }
