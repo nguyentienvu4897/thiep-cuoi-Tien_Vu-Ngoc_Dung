@@ -450,6 +450,26 @@ main .invite-customer .invite-frame {
     main .main-content {
         min-height: 100vh;
     }
+    main .main-content .bg-main-top-left {
+        height: 150px;
+        width: 200px;
+        z-index: 100;
+    }
+    main .main-content .bg-main-top-right {
+        height: 150px;
+        width: 200px;
+        z-index: 100;
+    }
+    main .main-content .bg-main-bottom-left {
+        height: 150px;
+        width: 200px;
+        z-index: 100;
+    }
+    main .main-content .bg-main-bottom-right {
+        height: 150px;
+        width: 200px;
+        z-index: 100;
+    }
 }
 
 .fixed {
