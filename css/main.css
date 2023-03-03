@@ -121,7 +121,7 @@ main {
 
 main .main-content {
     position: relative;
-    min-height: 150vh;
+    min-height: 100vh;
     background-color: #c8e1d1;
 }
 
@@ -392,8 +392,11 @@ main .invite-customer .invite-frame {
 .swiper-slide img {
     display: block;
     width: 100%;
-    height: 900px;
+    height: 100vh;
     object-fit: contain;
+}
+.swiper-pagination-bullet-active {
+    background-color: #c8e1d1 !important;
 }
 
 @media only screen and (max-width: 768px) {
@@ -406,14 +409,15 @@ main .invite-customer .invite-frame {
         width: 150px;
     }
     .header .header-content .groom-name, .header .header-content .bride-name{
-        padding-top: 20px;
+        padding-top: 10px;
+        font-size: 42px;
     }
     .header .date-wedding .first-day, .header .date-wedding .time {
         display: none;
     }
     .header .date-wedding .day {
         padding: 0 20px;
-        font-size: 36px;
+        font-size: 20px;
         border-left: 1px solid #000;
         border-right: 1px solid #000;
     }
@@ -425,5 +429,187 @@ main .invite-customer .invite-frame {
     }
     .wedding-event .group-order .groom-home {
         order: 2;
+    }
+    .invite-customer .main .main-picture-frame .bg-top {
+        width: 130px;
+        height: 160px;
+    }
+    .invite-customer .main .main-picture-frame .bg-bottom {
+        width: 160px;
+        height: 190px;
+        bottom: -30px;
+        right: -20px;
+    }
+    .swiper-slide img {
+        height: auto;
+    }
+    main .main-content {
+        min-height: 100vh;
+    }
+}
+
+.fixed {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.fixed .group-fixed {
+    position: relative;
+    width: 120%;
+    cursor: pointer;
+}
+
+.fixed .group-fixed .swing {
+    position: absolute;
+    top: 41%;
+    left: 41%;
+    animation: swing ease-in-out 1s infinite alternate;
+}
+
+.fixed .group-fixed .rotate {
+    width: 100%;
+    height: auto;
+    animation: rotation 12s infinite linear;
+}
+
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+
+@keyframes rotation {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(359deg);
+    }
+}
+
+/* The Modal (background) */
+.modal-popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-popup .modal-content {
+    background-color: #c8e1d1;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50% !important; /* Could be more or less, depending on screen size */
+    font-family: 'Great Vibes', cursive;
+}
+
+.modal-popup .modal-content .groom-bank,.modal-popup .modal-content .bride-bank {
+    display: flex;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+
+.modal-popup .modal-content .img-bank {
+    background-color: #fff;
+    border-radius: 20px;
+
+}
+
+.modal-popup .modal-content .img-bank img{
+    width: 210px;
+    border: 10px solid #c2beab;
+    border-radius: 20px;
+}
+
+/* The Close Button */
+.modal-popup .close {
+    color: #aaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    direction: rtl;
+}
+
+.modal-popup .close:hover,
+.modal-popup .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.copy {
+    cursor: pointer;
+}
+
+.copy {
+    position: relative;
+    display: flex;
+}
+
+.copy .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.copy .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.copy:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+lottie-player {
+    width: 300px;
+    height: 230px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    lottie-player {
+        height: 200px;
+    }
+    .modal-popup .modal-content {
+        width: 100% !important;
+        margin: 30% 0;
+    }
+    .modal-popup .modal-content .img-bank img {
+        width: 120px;
+    }
+    .header .header-content .header-content-title {
+        font-size: 56px;
+    }
+    .header .header-content .between-header-bg {
+        margin-top: 15px;
     }
 }
