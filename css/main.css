@@ -415,9 +415,12 @@ main .invite-customer .invite-frame {
     .header .date-wedding .first-day, .header .date-wedding .time {
         display: none;
     }
+    .header .date-wedding {
+        margin-top: 10px;
+    }
     .header .date-wedding .day {
         padding: 0 20px;
-        font-size: 20px;
+        font-size: 16px;
         border-left: 1px solid #000;
         border-right: 1px solid #000;
     }
@@ -441,7 +444,7 @@ main .invite-customer .invite-frame {
         right: -20px;
     }
     .swiper-slide img {
-        height: auto;
+        height: 100vh;
     }
     main .main-content {
         min-height: 100vh;
